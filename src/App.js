@@ -24,7 +24,7 @@ class App extends React.Component {
           home : {
             title: 'Agustina Garcia',
             subtitle: 'Desarrolladora Frontend Jr.',
-            content: 'Algunos de mis proyectos',
+            content: 'Abajo podes visualizar algunos de los proyectos subidos a mi repositorio',
           },
           aboutme : {
             title: 'Sobre m&iacute;',

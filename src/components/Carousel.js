@@ -13,19 +13,19 @@ class Carousel extends React.Component {
         this.state = {
             items: [
                 {
-                id: 0,
+                    id: 0,
+                    title: 'Proyecto final de curso de PHP',
+                    subTitle: 'Desarrollo en PHP con Laravel y base de datos',
+                    imgSrc: PHP,
+                    link: 'https://obscure-refuge-50354.herokuapp.com/',
+                    selected: false
+                },
+                {
+                id: 1,
                 title: 'Proyecto final de Bootcamp en ADA',
                 subTitle: 'Desarrollo en React y Node',
                 imgSrc: ADA,
                 link: 'https://github.com/agusgarcia17/proyecto-final',
-                selected: false
-            },
-            {
-                id: 1,
-                title: 'Proyecto final de curso de PHP',
-                subTitle: 'Desarrollo en PHP con Laravel y base de datos',
-                imgSrc: PHP,
-                link: 'https://obscure-refuge-50354.herokuapp.com/',
                 selected: false
             },
             {
@@ -63,7 +63,7 @@ class Carousel extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} onClick= {(e => this.handleCardClick(item.id, e))} key={item.id}/>
+            return <Card item={item} click= {(e => this.handleCardClick(item.id, e))} key={item.id}/>
         })
     }
 
