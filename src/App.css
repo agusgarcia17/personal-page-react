@@ -22,30 +22,13 @@
  color: #211F1F;
 }
 
-
-
-.custom-card {
-  margin:20px;
-}
-.custom-card-image {
-  border-radius: 10px;
-  width: 480px;
-  height: 300px;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.5s;
-  will-change: transform;
-}
-
-.custom-card-image:hover {
-  box-shadow: 20px 30px 100px -10px rgba(0, 0, 0, 0.4);
-}
-
-.custom-card-info {
-  min-height: 100px;
-  margin-top: 15px;
-
+.jumbotronCustom {
+    background-image:url('./img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    
 } 
-
+ 
  
 @media (max-width: 750px) {
   .banner .display-1 {
@@ -55,9 +38,5 @@
     font-size: 2rem;
   }
 
-  .custom-card-image { 
-    width: 320px; 
-    height: 200px; 
-  }
   
 }
