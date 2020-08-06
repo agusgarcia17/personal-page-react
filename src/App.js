@@ -7,6 +7,13 @@ import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: Raleway;
+    }
+  `
 
 class App extends React.Component {
 
@@ -49,6 +56,7 @@ class App extends React.Component {
           <Footer/>
         </Container>
 
+        <GlobalStyle />
       </Router>
       
     );
