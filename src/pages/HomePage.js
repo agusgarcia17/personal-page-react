@@ -7,7 +7,6 @@ function HomePage (props){
     return (
         <div>
         <Banner title={props.title} subtitle={props.subtitle} content={props.content}/>
-
         <Carousel/>
         </div>
     )

@@ -7,7 +7,7 @@ import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,7 +31,7 @@ class App extends React.Component {
           home : {
             title: 'Agustina Garcia',
             subtitle: 'Desarrolladora Frontend Jr.',
-            content: 'Abajo podes visualizar algunos de los proyectos subidos a mi repositorio',
+            content: 'Abajo podes visualizar algunos de los proyectos de mi repositorio',
           },
           aboutme : {
             title: 'Sobre m&iacute;',

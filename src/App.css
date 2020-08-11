@@ -3,27 +3,27 @@
    color: #908C8E;
  }
 
- .twitter:hover{
+ .Twitter:hover{
   color: #1DA1F2;
 }
  
-.facebook:hover{
+.Facebook:hover{
  color: #4267B2;
 } 
-.linkedin:hover{
+.Linkedin:hover{
  color: #2867B2;
 }
  
-.instagram:hover{
+.Instagram:hover{
  color: #C13584;
 }
 
-.github:hover{
+.Github:hover{
  color: #211F1F;
 }
 
 .jumbotronCustom {
-    background-image:url('./img/fondo.jpg');
+    background-image:url('./img/fondo-custom.jpg');
     background-size: cover;
     background-position: center;
     
