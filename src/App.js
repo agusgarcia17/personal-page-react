@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { createGlobalStyle } from "styled-components";
+import { ProfileProvider } from './context/ProfileContext';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,54 +16,44 @@ const GlobalStyle = createGlobalStyle`
     }
   `
 
-class App extends React.Component {
+function App(){
 
-  
-      constructor(props) {
-        super(props);
-  
-        this.state = {
-          title: 'Agustina Garcia',
-          headerLinks: [
-            {title: 'Home', path: '/'},
-            {title: 'Sobre m&iacute;', path: '/aboutme'},
-            {title: 'Contacto', path: '/contact'},
-          ],
-          home : {
-            title: 'Agustina Garcia',
-            subtitle: 'Desarrolladora Frontend Jr.',
-            content: 'Abajo podes visualizar algunos de los proyectos de mi repositorio',
-          },
-          aboutme : {
-            title: 'Sobre m&iacute;',
-          },
-          contact : {
-            title: 'Si tenes alguna duda, consulta o sugerencia, te invito a que me envies un mensaje',
-          }
-  
-        }
-      }
-  render(){
+  const data = {
+    
+    title: 'Agustina Garcia',
+    home : {
+      title: 'Agustina Garcia',
+      subtitle: 'Desarrolladora Frontend',
+      content: 'Abajo podes visualizar algunos de los proyectos de mi repositorio',
+    },
+    aboutme : {
+      title: 'Sobre mí',
+    },
+    contact : {
+      title: 'Si tenes alguna duda, consulta o sugerencia, te invito a que me envies un mensaje',
+    }
 
-    return (
+  }
+    
 
-      <Router>
-
-        <Container fluid className="p-0" >
-          <NavBar/>
-          <Route path='/' exact render={()=> <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle} content={this.state.home.content}/>}/>
-          <Route path='/aboutme' exact render={()=> <AboutPage title={this.state.aboutme.title}/>}/>
-          <Route path='/contact' exact render={()=> <ContactPage title={this.state.contact.title} />}/>
-          <Footer/>
-        </Container>
-
-        <GlobalStyle />
-      </Router>
+      return (
+        
+        <ProfileProvider value={data}>
+          <Router>
+            <Container fluid className="p-0" >
+              <NavBar/>
+              <Route exact path='/'  component={HomePage}/>
+              <Route exact path='/aboutme'  component={AboutPage}/>
+              <Route  exact path='/contact'  component={ContactPage}/>
+              <Footer/>
+            </Container>
+            <GlobalStyle />
+          </Router>
+      </ProfileProvider>
       
     );
     
   }
     
-}
 
 export default App;

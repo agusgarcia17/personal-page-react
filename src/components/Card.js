@@ -34,22 +34,32 @@ const CardImg = styled.img`
   
 `
 const CardInfo = styled.div`
-  min-height: 100px;
+  min-height: 100px; 
   margin-top: 15px;
+  @media (max-width: 750px) { 
+    width: 320px;  
+}
 `
 
 
  
 function Card (props) { 
 
+
+  const {link, imgSrc, title, subTitle, backend } = props.item
     return (
 
       <CustomCard className=' d-inline-block' >
-        <a href={props.item.link} rel="noopener noreferrer" target='_blank'><CardImg className=' shadow-box-example' src={props.item.imgSrc} alt={props.item.title} /></a>
+        <a href={link} rel="noopener noreferrer" target='_blank'><CardImg className=' shadow-box-example' src={imgSrc} alt={title} /></a>
         <CardInfo>
-          <Title  >{props.item.title}</Title>
-          <SubTitle  >{props.item.subTitle}</SubTitle>
-          <a href={props.item.link} rel="noopener noreferrer" target='_blank'>Ir a proyecto</a> 
+          <Title  >{title}</Title>
+          <SubTitle  >{subTitle}</SubTitle>
+          {backend ? 
+          <> 
+            <a href={backend} rel="noopener noreferrer" target='_blank'>Ir a backend</a> / 
+            <a href={link} rel="noopener noreferrer" target='_blank'> Ir a frontend</a>
+            </>
+          : <a href={link} rel="noopener noreferrer" target='_blank'>Ir a proyecto</a> }
 
         </CardInfo>
       </CustomCard>

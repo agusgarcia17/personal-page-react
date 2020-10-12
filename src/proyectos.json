@@ -1,0 +1,25 @@
+[
+        {
+            "id": 0,
+            "title": "Proyecto final de curso de PHP",
+            "subTitle": "Desarrollo en PHP con Laravel y base de datos",
+            "imgSrc": "https://i.postimg.cc/xdcw1kPT/Proyecto-PHP.jpg",
+            "link": "https://obscure-refuge-50354.herokuapp.com/"
+        },
+        {
+        "id": 1,
+        "title": "Proyecto simil Pinterest",
+        "subTitle": "Desarrollo en React y Node",
+        "imgSrc": "https://i.postimg.cc/QNTjqz1x/pinterest.jpg",
+        "link": "https://github.com/agusgarcia17/pinterProyect",
+        "backend" : "https://github.com/agusgarcia17/pinterProyect-back"  
+    },
+    {
+        "id": 2,
+        "title": "Proyecto de curso de React",
+        "subTitle": "Desarrollo en React y Firebase segun curso de Wes Bos",
+        "imgSrc": "https://i.postimg.cc/B6bdtjcn/Catch-of-the-day-React.jpg",
+        "link": "https://github.com/agusgarcia17/catch-of-the-day"  
+    }
+] 
+

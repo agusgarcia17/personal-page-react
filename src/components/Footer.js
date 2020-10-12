@@ -5,10 +5,8 @@ import { faTwitter, faGithub, faLinkedin, faInstagram, faFacebook } from '@forta
 
 class Footer extends React.Component {
 
-    constructor(props) {
-        super(props);
   
-        this.state = {
+        state = {
             redes: [
                 {
                     id: 0,
@@ -42,7 +40,6 @@ class Footer extends React.Component {
             },
         ]
         }
-      }
  
 
 

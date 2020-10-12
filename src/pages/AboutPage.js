@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import Banner from '../components/Banner'; 
+import ProfileContext from "./../context/ProfileContext"
 
-function AboutPage (props){
+function AboutPage (){
+
+    const { aboutme } = useContext(ProfileContext)
 
     return (
-        <h2>About page</h2>
+        <>
+             <Banner title={aboutme.title} subtitle={aboutme.subtitle} content={aboutme.content}/>
+
+        </>
     )
 
 
